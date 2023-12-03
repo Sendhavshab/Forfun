@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #yesButton {
+      font-size: 1em;
+    }
+
+    #yesMessage {
+      display: none;
+      font-size: 1.5em;
+      color: red;
+      background:black;
+      font-family:Tahoma;
+      font-weight:bold;
+    }
+    button {
+    color:black;
+    background:red;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>kya tum pagal ho</h1>
+
+  <div>
+  <button id="yesButton" onclick="showLoveMessage()">Yes</button>
+  </div>
+<button id="noButton" onclick="moveNoButton()">No</button>
+  <p id="yesMessage">😂mujhe lag hi raha tha 🤣</p>
+    
+
+  <script>
+    function moveNoButton() {
+      var noButton = document.getElementById('noButton');
+      noButton.style.marginTop = Math.floor(Math.random() * 200) + "px";
+      noButton.style.marginLeft = Math.floor(Math.random() * 200) + "px";
+
+      var yesButton = document.getElementById('yesButton');
+      yesButton.style.fontSize = (parseFloat(window.getComputedStyle(yesButton).fontSize) + 5) + 'px';
+    }
+
+    function showLoveMessage() {
+      var yesMessage = document.getElementById('yesMessage');
+      yesMessage.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
